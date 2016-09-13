@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+date_default_timezone_set('America/Sao_Paulo');
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -23,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = 'http://www.financecontrol.esy.es';
 
 /*
 |--------------------------------------------------------------------------
@@ -76,7 +77,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'english';
+$config['language']	= 'portuguese-br';
 
 /*
 |--------------------------------------------------------------------------
