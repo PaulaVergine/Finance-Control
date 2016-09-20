@@ -70,7 +70,7 @@ img{width: 100%;}
 
 
 .home .sign-in{
-    margin-top: 100px;
+    margin-top: 180px;
     color: #4B465A;
 }
 
@@ -149,6 +149,20 @@ img{width: 100%;}
 
 }
 
+.home-about h3{
+    text-align: center;
+    color: #f0f000;
+    font-size: 34px;
+}
+
+.home-about p{
+    color: #f0f000;
+    margin: 30px 50px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
 
 .home .footer{
     margin-top: 100px;
@@ -157,6 +171,46 @@ img{width: 100%;}
     padding-bottom: 50px;
 }
 
+.home .footer h5{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.home .footer ul{
+    list-style: none;
+}
+
+.home .footer li{
+    padding-bottom: 10px;
+}
+
+.home .footer .links-servicos a, .home .footer .links-fc a{
+    font-weight: bold;
+    color: #4B465A;
+}
+
+.home .footer .links-servicos a:hover, .home .footer .links-fc a:hover{
+    text-decoration: none;
+    color: #004d85;
+}
+
+.home .footer ul.link-social {
+    display: inline;
+}
+
+.home .footer ul.link-social li{
+    display: inline;
+}
+
+.home .footer ul.link-social a{
+    font-size: 30px;
+    color: #333;
+    margin-left: 10px;
+}
+
+.home .footer ul.link-social a:hover{
+    color: #004d85;
+}
 
 @media (max-width: 768px) {
     .item-menu-top {
@@ -169,7 +223,6 @@ img{width: 100%;}
     }
 
     .home .sign-in{
-        margin-top: 50px;
         color:#fff;
     }
 
