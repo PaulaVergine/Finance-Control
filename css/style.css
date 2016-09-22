@@ -293,3 +293,14 @@ img{width: 100%;}
     margin: 20px auto;
     text-align: center;
 }
+
+/* New User */
+.info-cad li{
+    line-height: 26px;
+}
+.form-cad p, input{
+    line-height: 30px;
+    height: 25px;
+    margin-bottom: 30px;
+}
+
