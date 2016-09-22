@@ -62,7 +62,7 @@ img{width: 100%;}
 
 
 .home header{
-    background: url(../img/home-bg-1.jpg) no-repeat fixed;
+    background: url(../img/home-bg-2.jpg) no-repeat fixed;
     background-size: cover;
     background-position: center;
     height: 600px;
@@ -161,8 +161,6 @@ img{width: 100%;}
     font-weight: bold;
     font-size: 18px;
 }
-
-
 
 .home .footer{
     margin-top: 100px;

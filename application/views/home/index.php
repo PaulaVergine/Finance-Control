@@ -16,11 +16,11 @@
 </head>
 <body class="home">
     <header>
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
                     <div class="navbar-brand">
-                        <a href="/" title="Finance Control"><img src="<?= base_url("img/logof.png") ?>" alt="Finance Control"></a>
+                        <a href="/" title="Finance Control"><img src="<?= base_url("img/logofc.png") ?>" alt="Finance Control"></a>
                     </div>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                         <span class="icon-bar"></span>
