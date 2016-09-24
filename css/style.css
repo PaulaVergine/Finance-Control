@@ -14,9 +14,11 @@ img{width: 100%;}
     border-radius: 0;
 }
 
+
 .navbar-default{
     background-color: #00B8D1;
     border: 0;
+    height: 62px;
 }
 
 .navbar-brand{
@@ -296,9 +298,30 @@ img{width: 100%;}
 .info-cad li{
     line-height: 26px;
 }
-.form-cad p, input{
+
+.info-cad ul{
+    list-style:none
+}
+.form-cad{
+    margin-top: 40px;
+}
+.form-cad p, .form-cad input{
     line-height: 30px;
-    height: 25px;
+    
     margin-bottom: 30px;
 }
+
+.form-cad button{
+    background-color: #00B8D1;
+    font-weight: bold;
+    color: #fff;
+}
+
+.form-cad button:hover{
+    background-color: #76cad6;
+    color: #fff;
+}
+
+
+
 
