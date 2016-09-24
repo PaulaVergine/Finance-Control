@@ -45,12 +45,17 @@
     <div class="row">
        <div class="col-md-1"></div>
         <div class="col-md-6 text-center form-cad">
-            <form accept-charset="UTF-8" action="/users" autocomplete="off" class="new_user" method="post">
+            <?php if(isset($status)){?>
+                <p class="alert-<?= $status[0]?>"><?= $status[1].' '.$status[2]?></p>
+            <?php }else{
+                echo '<p> </p>';
+            } ?>
+            <form accept-charset="UTF-8" action="<?= base_url('index.php/users/newUser')?>" autocomplete="off" method="post">
                 <input autocomplete="off" class="form-control" name="name" size="30" type="text" placeholder="Digite seu nome"/>
                 <input autocomplete="off" class="form-control" name="email" size="30" type="email" validate="{:uniqueness=&gt;false}" value="<?php echo( isset($email) ? $email :  '' )?>" placeholder="Informe seu endereço de e-mail"/>
                 <input autocomplete="off" class="form-control" name="pass" size="30" type="password" placeholder="Escolha uma senha"/>
                 <input autocomplete="off" class="form-control" name="passConf" size="30" type="password" placeholder="Redigite sua senha"/>
-                <button class="btn btn-large btn-default btn-block" name="submitUser" type="submit">Cadastre-se </button>
+                <input class="btn btn-large btn-default btn-fc-primary btn-block" name="submitUser" type="submit" value="Cadastre-se" />
 
                 <p >Ao clicar no botão acima, eu aceito a <a><strong>Política de Privacidade</strong></a> e o <a><strong>Termo de Uso</strong></a>.</p>
             </form>

@@ -88,6 +88,7 @@ img{width: 100%;}
     font-weight: 300;
     width: 70%;
     margin: 15px auto;
+    color: #fff;
 }
 
 .home .sign-in input{
@@ -303,23 +304,15 @@ img{width: 100%;}
     list-style:none
 }
 .form-cad{
-    margin-top: 40px;
+    margin-top: 30px;
 }
 .form-cad p, .form-cad input{
     line-height: 30px;
-    
     margin-bottom: 30px;
 }
 
-.form-cad button{
-    background-color: #00B8D1;
-    font-weight: bold;
-    color: #fff;
-}
-
-.form-cad button:hover{
-    background-color: #76cad6;
-    color: #fff;
+.congrats{
+    margin: 0 auto;
 }
 
 
