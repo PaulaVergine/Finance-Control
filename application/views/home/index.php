@@ -45,15 +45,15 @@
                     </div>
                 </div>
                 <div class="row text-center">
-                    <div class="col-md-2"></div>
-                    <form action="/user/novo_cadastro" method="post">
-                        <div class="col-md-3">
+                    <div class="col-md-1"></div>
+                    <?php echo form_open('/users/newUser')?>
+                        <div class="col-md-4">
                             <input type="text" name="email" class="form-control" placeholder="Digite seu e-mail"/>
                         </div>
                         <div class="col-md-2">
-                            <input type="submit" class="btn btn-default btn-fc-primary" value="Cadastrar">
+                            <input type="submit" name="submitEmail" class="btn btn-default btn-fc-primary" value="Cadastrar">
                         </div>
-                    </form>
+                    <?php echo form_close();?>
                 </div>
             </div>
         </div>
