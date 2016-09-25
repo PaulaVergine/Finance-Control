@@ -67,15 +67,15 @@
     <div class="boxes-features">
         <h2 class="text-center">CONHEÇA O ORGANIZADOR DAS SUAS FINAÇAS - FINANCE CONTROL</h2>
         <div class="row text-center">
-            <div class="box">
+            <div class="thumbnail box">
                 <img src="img/box1.jpg">
                 <p>Atravé da agenda financeira é possivel controlar os gastos diários e esporádicos</p>
             </div>
-            <div class="box">
+            <div class="thumbnail box">
                 <img src="img/box2.jpg">
                 <p>Graficos e planilhas para que a visualização seja de fácil entendimento</p>
             </div>
-            <div class="box">
+            <div class="thumbnail box">
                 <img src="img/box1.jpg">
                 <p>Controle as movimentações de suas contas bancarias, cartões de credito e o dinheiro que está em sua carteira.</p>
             </div>
@@ -83,7 +83,7 @@
     </div>
     <div class="row app">
         <div class="col-md-4">
-            <p>Controle sua vida financeira em qualqer lugar.</p>
+            <p>Controle sua vida financeira em qualquer lugar.</p>
         </div>
         <div class="col-md-8 pic-app">
             <img src="img/iphone.png" />
