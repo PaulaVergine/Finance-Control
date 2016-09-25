@@ -26,12 +26,12 @@ body {
     z-index: 1000;
     position: fixed;
     left: 200px;
-    top: 53px;
+    top: 50px;
     width: 0;
     height: 100%;
     margin-left: -200px;
     overflow-y: auto;
-    background: #00ABC4;
+    background: #004d85;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -97,7 +97,7 @@ body {
     }
 
     #sidebar-wrapper {
-        width: 200px;
+        width: 70px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
