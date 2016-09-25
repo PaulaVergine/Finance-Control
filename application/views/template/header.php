@@ -13,12 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
-<header class="container-fluid">
-    <nav class="navbar navbar-default navbar-fixed-top">
+<header>
+    <nav class="navbar navbar-default navbar-blue">
         <div class="container">
             <div class="navbar-header">
                 <div class="navbar-brand">
-                    <img src="<?= base_url("img/logof.png") ?>" alt="Finance Control" style="height: 40px;">
+                    <a href="/" title="Finance Control"><img src="<?= base_url("img/logofc.png") ?>" alt="Finance Control"></a>
                 </div>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
@@ -40,12 +40,21 @@
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li>
-                <a href="#"><span class="fa fa-pie-chart"></span>Estatisticas</a>
+                <a href="#" title=""><span class="fa fa-pie-chart" data-toggle="tooltip" data-placement="right" title="Estatisticas"></span></a>
             </li>
             <li>
-                <a href="#"><span class="fa fa-file-o"></span>Relátorio</a>
+                <a href="#" title="Relátorio"><span class="fa fa-file-o"></span></a>
+            </li>
+            <li>
+                <a href="#" title="Relátorio"><span class="fa fa-file-o"></span></a>
+            </li>
+            <li>
+                <a href="#" title="Relátorio"><span class="fa fa-file-o"></span></a>
+            </li>
+            <li>
+                <a href="#" title="Relátorio"><span class="fa fa-file-o"></span></a>
             </li>
         </ul>
     </div>
-    <div class="content">
+    <div class="container-fluid">
 <!-- /#sidebar-wrapper -->
