@@ -24,7 +24,8 @@ date_default_timezone_set('America/Sao_Paulo');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://www.financecontrol.esy.es';
+$config['base_url'] = 'http://fcontrol.dev';
+//$config['base_url'] = 'http://www.financecontrol.esy.es';
 
 /*
 |--------------------------------------------------------------------------

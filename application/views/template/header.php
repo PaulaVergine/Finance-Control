@@ -39,21 +39,27 @@
 <div id="wrapper" class="container-fluid">
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
+            <li><hr/></li>
             <li>
-                <a href="#" title=""><span class="fa fa-pie-chart" data-toggle="tooltip" data-placement="right" title="Estatisticas"></span></a>
+                <a href="#" title="Estatisticas"><span class="fa fa-pie-chart"</span></a>
             </li>
+            <li><hr/></li>
             <li>
-                <a href="#" title="Relátorio"><span class="fa fa-file-o"></span></a>
+                <a href="#" title="Relátorios"><span class="fa fa-file-o"></span></a>
             </li>
+            <li><hr/></li>
             <li>
-                <a href="#" title="Relátorio"><span class="fa fa-file-o"></span></a>
+                <a href="#" title="Gastos"><span class="fa fa-file-o"></span></a>
             </li>
+            <li><hr/></li>
             <li>
-                <a href="#" title="Relátorio"><span class="fa fa-file-o"></span></a>
+                <a href="#" title="Ganhos"><span class="fa fa-file-o"></span></a>
             </li>
+            <li><hr/></li>
             <li>
-                <a href="#" title="Relátorio"><span class="fa fa-file-o"></span></a>
+                <a href="#" title=""><span class="fa fa-automobile"></span></a>
             </li>
+            <li><hr/></li>
         </ul>
     </div>
     <div class="container-fluid">

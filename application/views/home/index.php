@@ -46,7 +46,7 @@
                 </div>
                 <div class="row text-center">
                     <div class="col-md-1"></div>
-                    <?php echo form_open('/users/newUser')?>
+                    <?php echo form_open('/Usuario/novoUsuario')?>
                         <div class="col-md-4">
                             <input type="text" name="email" class="form-control" placeholder="Digite seu e-mail"/>
                         </div>

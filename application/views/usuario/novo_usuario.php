@@ -50,7 +50,7 @@
             <?php }else{
                 echo '<p> </p>';
             } ?>
-            <form accept-charset="UTF-8" action="<?= base_url('index.php/users/newUser')?>" autocomplete="off" method="post">
+            <form accept-charset="UTF-8" action="<?= base_url('index.php/Usuario/novoUsuario')?>" autocomplete="off" method="post">
                 <input autocomplete="off" class="form-control" name="name" size="30" type="text" placeholder="Digite seu nome"/>
                 <input autocomplete="off" class="form-control" name="email" size="30" type="email" validate="{:uniqueness=&gt;false}" value="<?php echo( isset($email) ? $email :  '' )?>" placeholder="Informe seu endereço de e-mail"/>
                 <input autocomplete="off" class="form-control" name="pass" size="30" type="password" placeholder="Escolha uma senha"/>

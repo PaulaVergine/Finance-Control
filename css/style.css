@@ -9,6 +9,13 @@ body{
 
 img{width: 100%;}
 
+
+.sidebar-nav hr{
+    margin-top: 0;
+    margin-bottom: 0;
+    border-color: #477b81;
+}
+
 .navbar{
     margin-bottom: 0;
     border-radius: 0;
@@ -41,7 +48,7 @@ img{width: 100%;}
 }
 
 .navbar .fa, .sidebar-nav .fa{
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .item-menu-top {
@@ -265,17 +272,34 @@ img{width: 100%;}
     margin-right: 10px;
 }
 
-.control h1{
-    margin: 20px auto;
-    text-align: center;
-}
-
 .navbar-default.navbar-blue {
     background-color: #004d85;
 }
 
 .navbar-default .navbar-nav>li:hover{
     background: rgba(255,255,255,0.2);
+}
+
+/* Control */
+.control h1{
+    margin: 20px auto;
+    text-align: center;
+}
+
+.control table{
+    width: 80%;
+    margin: 20px auto;
+}
+
+.tables{
+    border: 2px solid silver;
+    box-shadow: 5px 5px 2px #888888;
+}
+
+.table-title{
+    font-size: 24px;
+    font-weight: bold;
+    cursor:pointer;
 }
 
 /* New User */

@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Users extends CI_Controller {
+class Usuario extends CI_Controller {
 
-    public function newUser(){
+    public function novoUsuario(){
 
         if($this->input->post('submitEmail')){
             $email = $this->input->post('email');
@@ -25,9 +25,9 @@ class Users extends CI_Controller {
                 'senha' => $email = $this->input->post('pass')
             );
 
-            $this->load->view("users/new_user_sucess.php");
+            $this->load->view("usuario/new_user_sucess.php");
         }else{
-            $this->load->view("users/new_user.php");
+            $this->load->view("usuario/novo_usuario.php");
         }
         
     }
