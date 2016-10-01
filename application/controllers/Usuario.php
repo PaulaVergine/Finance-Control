@@ -4,7 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Usuario extends CI_Controller {
 
     public function novoUsuario(){
-
         if($this->input->post('submitEmail')){
             $email = $this->input->post('email');
             
@@ -38,4 +37,31 @@ class Usuario extends CI_Controller {
             $this->load->view("usuario/novo_usuario.php");
         }
     }
+
+    public function login(){
+        if($this->input->post('submitLogin')) {
+            $email = $this->input->post('email');
+            $senha = $this->input->post('senha');
+
+            $this->load->model('usuario_model');
+            $usuario  = $this->usuario_model->verificaLogin($email,$senha);
+
+            if($usuario!=null){
+                $this->session->set_userdata("usuario_logado", $usuario);
+                redirect("controle/index");
+            }else{
+                $this->session->set_flashdata("aviso", "<p class='alert alert-danger' id='aviso'>Usuário ou senha inválida</p>");
+                redirect('../');
+            }
+        }
+    }
+    
+    public function logoff(){
+        unset($_SESSION["usuario_logado"]);
+        redirect('../');
+    }
+    
+    
+
+
 }

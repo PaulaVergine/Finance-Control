@@ -130,23 +130,26 @@
     </div>
 </div>
         <div id="loginPopOver" class="hide">
-            <form action="" method="post">
+            <?php echo form_open('/Usuario/login')?>
                 <div class="row">
+                    <?php if($this->session->flashdata("aviso")){ ?>
+                        <?= $this->session->flashdata("aviso"); ?>
+                    <?php } ?>
                     <div class="form-group col-md-12">
-                        <input type="text" placeholder="E-mail" class="form-control"/>
+                        <input type="text" placeholder="E-mail" name="email" class="form-control"/>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <input type="text" placeholder="Senha" class="form-control"/>
+                        <input type="text" placeholder="Senha" name="senha" class="form-control"/>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <input type="submit" value="Enviar" class="btn btn-default btn-sm btn-fc-primary" />
+                        <input type="submit" value="Enviar" name="submitLogin" class="btn btn-default btn-sm btn-fc-primary" />
                     </div>
                 </div>
-            </form>
+            <?php echo form_close();?>
         </div>
     <script src='<?= base_url("js/jquery-3.1.0.min.js") ?>' ></script>
     <script src='<?= base_url("js/bootstrap.min.js") ?>' ></script>

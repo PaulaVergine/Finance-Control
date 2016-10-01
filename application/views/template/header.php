@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="" title="Opções"><span class="fa fa-cog" aria-hidden="true"></span><span class="item-menu-top">Opções</span></a></li>
-                    <li><a href="" title="Sair"><span class="fa fa-sign-out" aria-hidden="true"></span><span class="item-menu-top">Sair</span></a></li>
+                    <li><a href="/index.php/usuario/logoff" title="Sair"><span class="fa fa-sign-out" aria-hidden="true"></span><span class="item-menu-top">Sair</span></a></li>
                 </ul>
             </div>
         </div>

@@ -9,6 +9,11 @@ class Usuario_model extends CI_Model{
         return $this->db->get("usuario")->row_array();
     }
 
+    public function pegaUsuarioById($id){
+        $this->db->where('cd_usuario',$id);
+        return $this->db->get("usuario")->row_array();
+    }
+
     public function verificaUsuarioExistente($email){
         $this->db->where('nm_email',$email);
         return $this->db->get("usuario");
