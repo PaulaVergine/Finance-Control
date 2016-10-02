@@ -48,6 +48,19 @@ class Usuario extends CI_Controller {
 
             if($usuario!=null){
                 $this->session->set_userdata("usuario_logado", $usuario);
+
+                $this->load->library('email');
+
+                $config['protocol'] = 'mail';
+                $config['mailtype'] = 'text';
+
+                $this->email->initialize($config);
+                $this->email->from('jcmartins87@outlook.com', 'Finance Control');
+                $this->email->to('jcramone@gmail.com');
+                $this->email->subject('Testeeeee');
+                $this->email->message('testesss');
+                $this->email->send();
+
                 redirect("controle/index");
             }else{
                 $this->session->set_flashdata("aviso", "<p class='alert alert-danger' id='aviso'>Usuário ou senha inválida</p>");
