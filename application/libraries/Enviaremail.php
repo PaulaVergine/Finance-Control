@@ -1,6 +1,6 @@
 <?php
 
-class Enviaremail extends CI_Email{
+class Enviaremail{
 
     public function enviar($to, $msg, $subject){
 
