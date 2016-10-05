@@ -23,13 +23,27 @@ class Usuario extends CI_Controller {
                 'nm_email' => $email = $this->input->post('email'),
                 'cd_senha' => $email = $this->input->post('pass')
             );
-
-            $this->load->library('enviaremail');
-            $this->enviaremail->enviar($usuario['nm_email'], 'Cadastro Relaziado com sucesso, sua senha: '. $usuario['cd_senha'], 'Cadastro - Finance Control');
          
             $this->load->model('usuario_model');
-            if($this->usuario_model->verificaUsuarioExistente($usuario['nm_email'])){
+
+            $this->load->model('carteira_model');
+            if(empty($this->usuario_model->verificaUsuarioExistente($usuario['nm_email']))){
+                
                 $this->usuario_model->salvaUsuario($usuario);
+
+                $id_novo_usuario = $this->db->insert_id();
+
+                $this->load->library('enviaremail');
+                $template = $this->load->view('email/confirma_cadastro', $usuario, true);
+                $this->enviaremail->enviar($usuario['nm_email'], $template, 'Finance Control - Novo Cadastro');
+
+                $carteira = array(
+                    'nm_carteira' => 'Carteira Padrao',
+                    'ds_cor' => '#5cb85c',
+                    'cd_usuario' => $id_novo_usuario
+                );
+                $this->carteira_model->salvaCarteira($carteira);
+
                 $this->load->view("usuario/novo_usuario_confirm.php");
             }else{
                 $status = array('danger','<span class="glyphicon glyphicon-exclamation-sign"></span>', 'Usuario já cadastrado');

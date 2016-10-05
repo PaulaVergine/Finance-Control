@@ -16,7 +16,7 @@ class Usuario_model extends CI_Model{
 
     public function verificaUsuarioExistente($email){
         $this->db->where('nm_email',$email);
-        return $this->db->get("usuario");
+        return $this->db->get("usuario")->row_array();
     }
 
     public function salvaUsuario($usuario){
