@@ -8,7 +8,7 @@ class Enviaremail{
 
         $ci->load->library('email');
 
-        $config['protocol'] = 'mail';
+        $config['protocol'] = 'sendmail';
         $config['mailtype'] = 'html';
 
         $config['wordwrap'] = TRUE;
