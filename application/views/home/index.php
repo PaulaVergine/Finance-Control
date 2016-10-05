@@ -141,7 +141,7 @@
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <input type="text" placeholder="Senha" name="senha" class="form-control"/>
+                        <input type="password" placeholder="Senha" name="senha" class="form-control"/>
                     </div>
                 </div>
                 <div class="row">
