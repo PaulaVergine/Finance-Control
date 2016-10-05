@@ -2,76 +2,46 @@
     <h1>Teste Control</h1>
 
 <div class="row">
-    <div> 
-    <table class="table table-striped tables" id="wallet-table">
+    <div>
+    <?php
+    if(isset($carteiras)){
+        foreach ($carteiras as $carteira){
+            ?>
+    <table class="table table-striped tables">
         <thead>
-        <tr class="table-title"><td colspan="4" style="background: #52bcc4">Carteira</td></tr>
+        <tr style="background: <?= $carteira['ds_cor'] ?>">
+            <td colspan="4" class="table-title"><?= $carteira['nm_carteira'] ?></td>
+            <td class="table-opt">
+                <a href="" title="Nova Carteira"><span class="fa fa-plus"></span> </a>
+                <a href="" title="Deletar Carteira"><span class="fa fa-remove"></span> </a>
+            </td>
+        </tr>
         <tr class="hidden">
             <th>Data</th>
             <th>Descricão</th>
             <th>Valor</th>
-            <th>Saldo</th>
+            <th>Origem</th>
+            <th>Operações</th>
         </tr>
         </thead>
         <tbody class="hidden">
+    <?php 
+    if(!empty($movimentacoes)){
+        foreach ($movimentacoes as $registro){ ?>
         <tr>
-            <td>10/12/12</td>
-            <td>balablabal</td>
-            <td>200,300</td>
-            <td>303003</td>
+            <td><?= $registro['dt_movimentacao'] ?></td>
+            <td><?= $registro['ds_movimentacao'] ?></td>
+            <td><?= $registro['vl_movimentacao'] ?></td>
+            <td><?= $registro['vl_movimentacao'] ?></td>
+            <td><span class="fa fa-pencil"></span> <span class="fa fa-trash-o"></span></td>
         </tr>
-        <tr>
-            <td>10/12/12</td>
-            <td>balablabal</td>
-            <td>200,300</td>
-            <td>303003</td>
-
+    <?php }
+    }else{ ?>
+            <tr><td colspan="5" class="text-center"> Ainda não há registros.</br> Adicionar um novo Registro:</br> <a href="#novoRegistro" title="Novo Registro"><span class="fa fa-plus-circle"></span></a></td> </tr>
+    <?php } ?>
         </tbody>
     </table>
-        <table class="table table-striped tables" id="account-table">
-            <thead>
-            <tr class="table-title"><td colspan="4" style="background: #cd6e00">Conta</td></tr>
-            <tr class="hidden">
-                <th>Data</th>
-                <th>Descricão</th>
-                <th>Valor</th>
-                <th>Saldo</th>
-            </tr>
-            </thead>
-            <tbody class="hidden">
-            <tr>
-                <td>10/12/12</td>
-                <td>balablabal</td>
-                <td>200,300</td>
-                <td>303003</td>
-            </tr>
-            <tr>
-                <td>10/12/12</td>
-                <td>balablabal</td>
-                <td>200,300</td>
-                <td>303003</td>
-
-            </tbody>
-        </table>
-        <table class="table table-striped tables" id="card-table">
-            <thead>
-            <tr class="table-title"><td colspan="4" style="background: #5cb85c">Cartão</td></tr>
-            <tr class="hidden">
-                <th>Data</th>
-                <th>Descricão</th>
-                <th>Valor</th>
-                <th>Saldo</th>
-            </tr>
-            </thead>
-            <tbody class="hidden">
-            <tr>
-                <td>10/12/12</td>
-                <td>balablabal</td>
-                <td>200,300</td>
-                <td>303003</td>
-            </tr>
-            </tbody>
-        </table>
+    <?php } }?>
 
     </div>
     </div

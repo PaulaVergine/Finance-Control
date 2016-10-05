@@ -11,13 +11,12 @@
                 for(var i = 0; i < tt.length; i++){
                     (function (i){
                         tt[i].addEventListener('click', function(){
-
-                            if(tt[i].nextElementSibling.className == 'hidden'){
-                                tt[i].nextElementSibling.className = '';
+                            if(tt[i].parentNode.nextElementSibling.className == 'hidden'){
                                 tt[i].parentNode.nextElementSibling.className = '';
+                                tt[i].parentNode.parentNode.nextElementSibling.className = '';
                             }else{
-                                tt[i].nextElementSibling.className = 'hidden';
                                 tt[i].parentNode.nextElementSibling.className = 'hidden';
+                                tt[i].parentNode.parentNode.nextElementSibling.className = 'hidden';
                             }
                         });
                     }(i));

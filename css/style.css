@@ -302,6 +302,32 @@ img{width: 100%;}
     cursor:pointer;
 }
 
+.table-opt{
+    text-align: right;
+}
+
+.table-opt a:active,.table-opt a{
+    color: #333;
+    text-decoration: none;
+}
+
+.table-opt a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.table-opt .fa{
+    vertical-align: middle;
+    font-size: 30px;
+    padding: 0 20px;
+}
+
+.table .fa.fa-plus-circle{
+    font-size: 25px;
+    vertical-align: middle;
+    color: green;
+}
+
 /* New User */
 .info-cad li{
     line-height: 26px;

@@ -6,11 +6,18 @@ class Controle extends CI_Controller {
     public function index(){
         $usuario = $this->session->userdata('usuario_logado');
 
+        if ($usuario == null){
+            redirect('../');
+        }
+
         $this->load->model('usuario_model');
+        $this->load->model('categoria_model');
+        $this->load->model('carteira_model');
+
         $usuario = $this->usuario_model->pegaUsuarioById($usuario['cd_usuario']);
-        $categorias = '';
+        $categorias = $this->categoria_model->pegaCategoriasUsuario($usuario['cd_usuario']);;
         $contas = '';
-        $carteiras = '';
+        $carteiras = $this->carteira_model->pegaCarteirasUsuario($usuario['cd_usuario']);;
         $cartoes = '';
         $preferencias = '';
         $movimentacoes = '';
