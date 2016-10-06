@@ -40,7 +40,8 @@ class Usuario extends CI_Controller {
                 $carteira = array(
                     'nm_carteira' => 'Carteira Padrao',
                     'ds_cor' => '#5cb85c',
-                    'cd_usuario' => $id_novo_usuario
+                    'cd_usuario' => $id_novo_usuario,
+                    'status' => 1,
                 );
                 $this->carteira_model->salvaCarteira($carteira);
 
