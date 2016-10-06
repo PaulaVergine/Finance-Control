@@ -34,7 +34,7 @@ class Usuario extends CI_Controller {
                 $id_novo_usuario = $this->db->insert_id();
 
                 $this->load->library('enviaremail');
-                $template = $this->load->view('email/confirma_cadastro', $usuario, true);
+                $template = $this->load->view('email/confirma_cadastro',array('usuario' => $usuario), true);
                 $this->enviaremail->enviar($usuario['nm_email'], $template, 'Finance Control - Novo Cadastro');
 
                 $carteira = array(
