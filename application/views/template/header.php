@@ -41,23 +41,23 @@
         <ul class="sidebar-nav">
             <li><hr/></li>
             <li>
-                <a href="#" title="Estatisticas"><span class="fa fa-pie-chart"</span></a>
+                <a href="#" id="NovaCarteira" title="Adicionar Carteira" data-toggle="modal" data-target="#myModal" data-title="Nova Carteira" data-action="<?= base_url('index.php/carteira/novaCarteira') ?>"><span class="fa fa-money"</span></a>
             </li>
             <li><hr/></li>
             <li>
-                <a href="#" title="Relátorios"><span class="fa fa-file-o"></span></a>
+                <a href="#" title="Adicionar Conta" data-toggle="modal" data-target="#myModal" data-title="Nova Conta" data-action="<?= base_url('index.php/conta/NovaConta')?>"><span class="fa fa-gg"></span></a>
             </li>
             <li><hr/></li>
             <li>
-                <a href="#" title="Gastos"><span class="fa fa-file-o"></span></a>
+                <a href="#" title="Adicionar Cartão" data-toggle="modal" data-target="#myModal" data-title="Novo Cartão" data-action="<?= base_url('index.php/cartao/NovoCartao')?>"><span class="fa fa-credit-card"></span></a>
             </li>
             <li><hr/></li>
             <li>
-                <a href="#" title="Ganhos"><span class="fa fa-file-o"></span></a>
+                <a href="#" title="Estatisticas"><span class="fa fa-pie-chart"></span></a>
             </li>
             <li><hr/></li>
             <li>
-                <a href="#" title=""><span class="fa fa-automobile"></span></a>
+                <a href="#" title="Relatorios"><span class="fa fa-file-text"></span></a>
             </li>
             <li><hr/></li>
         </ul>
