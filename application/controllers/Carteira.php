@@ -37,5 +37,20 @@ class Carteira extends CI_Controller {
         redirect("controle/index");
 
     }
-    
+
+    public function editarCarteira($id_carteira){
+
+        if(isset($_POST)){
+            
+            $carteira = array(
+                'nm_carteira' => $this->input->post('nome'),
+                'ds_cor' => $this->input->post('cor')
+            );
+            $this->load->model('carteira_model');
+            $this->carteira_model->editaCarteira($id_carteira, $carteira);
+        }
+
+        redirect("controle/index");
+
+    }
 }
