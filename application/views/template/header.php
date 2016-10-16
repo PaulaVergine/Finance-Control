@@ -45,11 +45,11 @@
             </li>
             <li><hr/></li>
             <li>
-                <a href="#" title="Adicionar Conta" data-toggle="modal" data-target="#myModal" data-title="Nova Conta" data-action="<?= base_url('index.php/conta/NovaConta')?>"><span class="fa fa-gg"></span></a>
+                <a href="#" id="NovaConta" title="Adicionar Conta" data-toggle="modal" data-target="#myModal" data-title="Nova Conta" data-action="<?= base_url('index.php/conta/NovaConta')?>"><span class="fa fa-gg"></span></a>
             </li>
             <li><hr/></li>
             <li>
-                <a href="#" title="Adicionar Cartão" data-toggle="modal" data-target="#myModal" data-title="Novo Cartão" data-action="<?= base_url('index.php/cartao/NovoCartao')?>"><span class="fa fa-credit-card"></span></a>
+                <a href="#" id="NovoCartao" title="Adicionar Cartão" data-toggle="modal" data-target="#myModal" data-title="Novo Cartão" data-action="<?= base_url('index.php/cartao/NovoCartao')?>"><span class="fa fa-credit-card"></span></a>
             </li>
             <li><hr/></li>
             <li>

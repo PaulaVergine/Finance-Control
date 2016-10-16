@@ -29,13 +29,25 @@
                 
                 var title = button.data('title')
                 var action = button.data('action')
-                
+
                 var modal = $(this)
                 modal.find('.modal-title').text(title)
                 modal.find('.modal-form').attr('action', action)
+            })
+
+            $('#NovaCarteira').add('.editaCarteira').on('click', function () {
+                $('#contaFields').addClass('hide');
+            })
+
+            $('#NovaConta').add('.editaConta').on('click', function () {
+                $('#contaFields').removeClass('hide');
+            })
+
+            $('#NovoCartao').add('.editaCartao').on('click', function () {
 
             })
         </script>
+
     </div>
 </body>
 </html>
