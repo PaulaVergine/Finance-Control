@@ -68,7 +68,7 @@ class Usuario extends CI_Controller {
                 $this->session->set_userdata("usuario_logado", $usuario);
                 redirect("controle/index");
             }else{
-                $this->session->set_flashdata("aviso", "<p class='alert alert-danger' id='aviso'>Usuário ou senha inválida</p>");
+                $this->session->set_flashdata("aviso", "<p class='alert-danger text-center' id='aviso'><gitstrong>Usuário ou senha inválida</gitstrong></p>");
                 redirect('../');
             }
         }
