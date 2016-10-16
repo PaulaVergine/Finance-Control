@@ -17,11 +17,15 @@ class Carteira_model extends CI_Model{
         $this->db->where('cd_carteira', $id);
         $this->db->where('status', 1);
         return $this->db->get('carteira')->row_array();
+    }
 
+    public function editaCarteira($id, $carteira){
+        $this->db->where('cd_carteira', $id);
+        $this->db->update('carteira', $carteira);
     }
 
     public function deletaCarteira($id){
-        $tables = array('carteira'); // deletar movimentacoes ao deletar a carteira
+        $tables = array('carteira'); // TODO deletar movimentacoes ao deletar a carteira
         $this->db->where('cd_carteira', $id);
         $this->db->delete($tables);
     }

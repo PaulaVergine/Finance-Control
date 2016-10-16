@@ -15,7 +15,7 @@
         <tr style="background: <?= $carteira['ds_cor'] ?>">
             <td colspan="4" class="table-title"><span class="fa fa-money"> </span><?= ' - '. $carteira['nm_carteira'] ?></td>
             <td class="table-opt">
-                <a href="" title="Editar Carteira"><span class="fa fa-pencil"></span> </a>
+                <a href="#" id="editaCarteira" title="Editar Carteira" data-toggle="modal" data-target="#myModal" data-title="Editar Carteira" data-action="<?= base_url('index.php/carteira/editarCarteira/'.$carteira['cd_carteira']) ?>"><span class="fa fa-pencil"></span> </a>
                 <a href="<?= base_url('index.php/carteira/deletarCarteira/'.$carteira['cd_carteira'])?>" title="Deletar Carteira"><span class="fa fa-remove"></span> </a>
             </td>
         </tr>
@@ -46,8 +46,54 @@
     </table>
     <?php } }?>
 
-
     </div>
+    <div class="row">
+        <?php if($this->session->flashdata("aviso")){ ?>
+            <?= $this->session->flashdata("aviso"); ?>
+        <?php } ?>
+        <div>
+            <?php
+            if(isset($contas)){
+                foreach ($contas as $conta){
+                    ?>
+                    <table class="table table-striped tables">
+                        <thead>
+                        <tr style="background: <?= $carteira['ds_cor'] ?>">
+                            <td colspan="4" class="table-title"><span class="fa fa-money"> </span><?= ' - '. $carteira['nm_carteira'] ?></td>
+                            <td class="table-opt">
+                                <a href="#" id="editaCarteira" title="Editar Carteira" data-toggle="modal" data-target="#myModal" data-title="Editar Carteira" data-action="<?= base_url('index.php/carteira/editarCarteira/'.$carteira['cd_carteira']) ?>"><span class="fa fa-pencil"></span> </a>
+                                <a href="<?= base_url('index.php/carteira/deletarCarteira/'.$carteira['cd_carteira'])?>" title="Deletar Carteira"><span class="fa fa-remove"></span> </a>
+                            </td>
+                        </tr>
+                        <tr class="hidden">
+                            <th>Data</th>
+                            <th>Descricão</th>
+                            <th>Valor</th>
+                            <th>Origem</th>
+                            <th>Operações</th>
+                        </tr>
+                        </thead>
+                        <tbody class="hidden">
+                        <?php
+                        if(!empty($movimentacoes)){
+                            foreach ($movimentacoes as $registro){ ?>
+                                <tr>
+                                    <td><?= $registro['dt_movimentacao'] ?></td>
+                                    <td><?= $registro['ds_movimentacao'] ?></td>
+                                    <td><?= $registro['vl_movimentacao'] ?></td>
+                                    <td><?= $registro['vl_movimentacao'] ?></td>
+                                    <td><span class="fa fa-pencil"></span> <span class="fa fa-trash-o"></span></td>
+                                </tr>
+                            <?php }
+                        }else{ ?>
+                            <tr><td colspan="5" class="text-center"> Ainda não há registros.</br> Adicionar um novo Registro:</br> <a href="#novoRegistro" title="Novo Registro"><span class="fa fa-plus-circle"></span></a></td> </tr>
+                        <?php } ?>
+                        </tbody>
+                    </table>
+                <?php } }?>
+
+
+        </div>
     </div
     </div
 </div>
