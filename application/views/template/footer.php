@@ -33,17 +33,33 @@
                 var modal = $(this)
                 modal.find('.modal-title').text(title)
                 modal.find('.modal-form').attr('action', action)
+
             })
 
-            $('#NovaCarteira').add('.editaCarteira').on('click', function () {
+            $('#NovaCarteira').on('click', function () {
                 $('#contaFields').addClass('hide');
             })
 
-            $('#NovaConta').add('.editaConta').on('click', function () {
+            $('.editaCarteira').on('click', function () {
+                $('#contaFields').addClass('hide');
+                $('input[name=nome]').attr('value', $(this).data('nome'));
+                $('input[name=cor]').attr('value', $(this).data('cor'));
+            })
+
+            $('#NovaConta').on('click', function () {
                 $('#contaFields').removeClass('hide');
             })
 
+            $('.editaConta').on('click', function () {
+                $('#contaFields').removeClass('hide');
+                $('input[name=nome]').attr('value', $(this).data('nome'));
+                $('input[name=cor]').attr('value', $(this).data('cor'));
+                $('input[name=tipo]').attr('value', $(this).data('tipo'));
+                $('input[name=banco]').attr('value', $(this).data('banco'));
+            })
+
             $('#NovoCartao').add('.editaCartao').on('click', function () {
+                $('#contaFields').addClass('hide');
 
             })
         </script>

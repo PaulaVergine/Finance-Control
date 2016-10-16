@@ -15,7 +15,7 @@
         <tr style="background: <?= $carteira['ds_cor'] ?>">
             <td colspan="4" class="table-title"><span class="fa fa-money"> </span><?= ' - '. $carteira['nm_carteira'] ?></td>
             <td class="table-opt">
-                <a href="#" class="editaCarteira" title="Editar Carteira" data-toggle="modal" data-target="#myModal" data-title="Editar Carteira" data-action="<?= base_url('index.php/carteira/editarCarteira/'.$carteira['cd_carteira']) ?>"><span class="fa fa-pencil"></span> </a>
+                <a href="#" class="editaCarteira" title="Editar Carteira" data-toggle="modal" data-target="#myModal" data-title="Editar Carteira" data-nome="<?= $carteira['nm_carteira'] ?>" data-cor="<?= $carteira['ds_cor'] ?>" data-action="<?= base_url('index.php/carteira/editarCarteira/'.$carteira['cd_carteira']) ?>"><span class="fa fa-pencil"></span> </a>
                 <a href="<?= base_url('index.php/carteira/deletarCarteira/'.$carteira['cd_carteira'])?>" title="Deletar Carteira"><span class="fa fa-remove"></span> </a>
             </td>
         </tr>
@@ -59,7 +59,7 @@
                         <tr style="background: <?= $conta['ds_cor'] ?>">
                             <td colspan="4" class="table-title"><span class="fa fa-gg"> </span><?= ' - '. $conta['nm_conta'] .' - '. $conta['banco']?></td>
                             <td class="table-opt">
-                                <a href="#" class="editaConta" title="Editar Conta" data-toggle="modal" data-target="#myModal" data-title="Editar Conta" data-action="<?= base_url('index.php/conta/editarConta/'.$conta['cd_conta']) ?>"><span class="fa fa-pencil"></span> </a>
+                                <a href="#" class="editaConta" title="Editar Conta" data-toggle="modal" data-target="#myModal" data-title="Editar Conta" data-nome="<?= $conta['nm_conta'] ?>" data-cor="<?= $conta['ds_cor'] ?>" data-tipo="<?= $conta['tipo'] ?>" data-banco="<?= $conta['banco'] ?>" data-action="<?= base_url('index.php/conta/editarConta/'.$conta['cd_conta']) ?>"><span class="fa fa-pencil"></span> </a>
                                 <a href="<?= base_url('index.php/conta/deletarConta/'.$conta['cd_conta'])?>" title="Deletar Conta"><span class="fa fa-remove"></span> </a>
                             </td>
                         </tr>
@@ -104,21 +104,21 @@
                         <div class="row">
                             <div class="form-group col-md-2 col-md-offset-1">
                                 <label for="cor">Cor: </label>
-                                <input type="color" placeholder="" name="cor" class="form-control"/>
+                                <input type="color" name="cor" class="form-control" />
                             </div>
                             <div class="form-group col-md-6 col-md-offset-1">
                                 <label for="nome">Nome: </label>
-                                <input type="text" placeholder="Nome" name="nome" class="form-control"/>
+                                <input type="text" name="nome" class="form-control" />
                             </div>
                         </div>
                         <div class="row hide" id="contaFields">
                             <div class="form-group col-md-3 col-md-offset-1">
                                 <label for="tipo">Tipo: </label>
-                                <input type="text" placeholder="" name="tipo" class="form-control"/>
+                                <input type="text" name="tipo" class="form-control" />
                             </div>
                             <div class="form-group col-md-4 col-md-offset-1">
                                 <label for="banco">Banco </label>
-                                <input type="text" placeholder="" name="banco" class="form-control"/>
+                                <input type="text" name="banco" class="form-control" />
                             </div>
                         </div>
                     </div>
