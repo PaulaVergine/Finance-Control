@@ -14,12 +14,13 @@ class Controle extends CI_Controller {
         $this->load->model('categoria_model');
         $this->load->model('carteira_model');
         $this->load->model('conta_model');
+        $this->load->model('cartao_model');
 
         $usuario = $this->usuario_model->pegaUsuarioById($usuario['cd_usuario']);
         $categorias = $this->categoria_model->pegaCategoriasUsuario($usuario['cd_usuario']);
         $contas = $this->conta_model->pegaContasUsuario($usuario['cd_usuario']);
         $carteiras = $this->carteira_model->pegaCarteirasUsuario($usuario['cd_usuario']);
-        $cartoes = '';
+        $cartoes = $this->cartao_model->pegaCartoesUsuario($usuario['cd_usuario']);;
         $preferencias = '';
         $movimentacoes = '';
 

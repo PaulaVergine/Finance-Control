@@ -14,7 +14,7 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-default navbar-blue">
+    <nav class="navbar navbar-default navbar-blue navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <div class="navbar-brand">

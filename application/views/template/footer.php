@@ -38,29 +38,42 @@
 
             $('#NovaCarteira').on('click', function () {
                 $('#contaFields').addClass('hide');
+                $('#cartaoFields').addClass('hide');
             })
 
             $('.editaCarteira').on('click', function () {
                 $('#contaFields').addClass('hide');
+                $('#cartaoFields').addClass('hide');
                 $('input[name=nome]').attr('value', $(this).data('nome'));
                 $('input[name=cor]').attr('value', $(this).data('cor'));
             })
 
             $('#NovaConta').on('click', function () {
                 $('#contaFields').removeClass('hide');
+                $('#cartaoFields').addClass('hide');
             })
 
             $('.editaConta').on('click', function () {
                 $('#contaFields').removeClass('hide');
+                $('#cartaoFields').addClass('hide');
                 $('input[name=nome]').attr('value', $(this).data('nome'));
                 $('input[name=cor]').attr('value', $(this).data('cor'));
                 $('input[name=tipo]').attr('value', $(this).data('tipo'));
                 $('input[name=banco]').attr('value', $(this).data('banco'));
             })
 
-            $('#NovoCartao').add('.editaCartao').on('click', function () {
+            $('#NovoCartao').on('click', function () {
+                $('#cartaoFields').removeClass('hide');
                 $('#contaFields').addClass('hide');
+            })
 
+            $('.editaCartao').on('click', function () {
+                $('#cartaoFields').removeClass('hide');
+                $('#contaFields').addClass('hide');
+                $('input[name=nome]').attr('value', $(this).data('nome'));
+                $('input[name=cor]').attr('value', $(this).data('cor'));
+                $('input[name=tipo]').attr('value', $(this).data('tipo'));
+                $('input[name=bandeira]').attr('value', $(this).data('bandeira'));
             })
         </script>
 
