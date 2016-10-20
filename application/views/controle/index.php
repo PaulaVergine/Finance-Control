@@ -8,7 +8,7 @@
 <div class="row">
     <div class="tables-carteira">
     <?php
-    if(isset($carteiras)){
+    if(isset($carteiras) && !empty($carteiras)){
         echo '<h2>Carteiras</h2>';
         foreach ($carteiras as $carteira){
             ?>
@@ -54,7 +54,7 @@
     <div class="row">
         <div class="tables-conta">
             <?php
-            if(isset($contas)){
+            if(isset($contas)&& !empty($contas)){
                 echo '<h2>Contas</h2>';
                 foreach ($contas as $conta){
                     ?>
@@ -99,7 +99,7 @@
     <div class="row">
         <div class="tables-cartao">
             <?php
-            if(isset($cartoes)){
+            if(isset($cartoes) && !empty($cartoes)){
                 echo '<h2>Cartões</h2>';
                 foreach ($cartoes as $cartao){
                     ?>
