@@ -273,7 +273,7 @@ img{width: 100%;}
 }
 
 .navbar-default.navbar-blue {
-    background-color: #004d85;
+    background-color: #0264ab;
 }
 
 .navbar-default .navbar-nav>li:hover{
@@ -298,6 +298,12 @@ img{width: 100%;}
 .tables{
     border: 2px solid silver;
     box-shadow: 5px 5px 2px #888888;
+}
+
+.table-title{
+    font-size: 24px;
+    font-weight: bold;
+    cursor:pointer;
 }
 
 .table-title{
