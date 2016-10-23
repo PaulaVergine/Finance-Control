@@ -32,12 +32,12 @@ class Cartao extends CI_Controller {
         if($usuario['cd_usuario'] == $cartao['cd_usuario']){
             $cartao['status'] = 0;
             $this->cartao_model->deletaCartao($id_cartao, $cartao);
-            $this->session->set_flashdata("aviso", "<p class='alert alert-success text-center' id='aviso'><strong>Deletado cartao com sucesso</strong></p>");
+            $this->session->set_flashdata("aviso", "<p class='alert alert-success text-center' id='aviso'><strong>Deletado cartão com sucesso</strong></p>");
         }else{
-            $this->session->set_flashdata("aviso", "<p class='alert alert-danger text-center' id='aviso'><strong>Erro ao deletar cartao, Não Autorizado</strong></p>");
+            $this->session->set_flashdata("aviso", "<p class='alert alert-danger text-center' id='aviso'><strong>Erro ao deletar cartão, Não Autorizado</strong></p>");
         }
         redirect("controle/index");
-    }
+    } 
 
     public function editarCartao($id_cartao){
         if(isset($_POST)){
