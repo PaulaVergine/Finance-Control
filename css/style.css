@@ -296,8 +296,8 @@ img{width: 100%;}
 }
 
 .tables{
-    border: 2px solid silver;
-    box-shadow: 5px 5px 2px #888888;
+    /*border: 2px solid silver;
+    box-shadow: 5px 5px 2px #888888;*/
 }
 
 .table-title{
@@ -307,7 +307,7 @@ img{width: 100%;}
 }
 
 .table-title{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     cursor:pointer;
 }
@@ -328,7 +328,7 @@ img{width: 100%;}
 
 .table-opt .fa{
     vertical-align: middle;
-    font-size: 30px;
+    font-size: 22px;
     padding: 0 20px;
 }
 
@@ -336,6 +336,14 @@ img{width: 100%;}
     font-size: 25px;
     vertical-align: middle;
     color: green;
+}
+
+.tables tr td:last-child a:active, .tables tr td:last-child a{
+    color: #333;
+}
+
+.tables tr td:last-child a:hover{
+    color: #026
 }
 
 /* New User */

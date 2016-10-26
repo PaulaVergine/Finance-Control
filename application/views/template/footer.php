@@ -74,7 +74,33 @@
                 $('input[name=cor]').attr('value', $(this).data('cor'));
                 $('input[name=tipo]').attr('value', $(this).data('tipo'));
                 $('input[name=bandeira]').attr('value', $(this).data('bandeira'));
+                $('input[name=dt_vencimento]').attr('value', $(this).data('dtvenc'));
+                $('input[name=dt_validade]').attr('value', $(this).data('dtvalid'));
             })
+        </script>
+        <script>
+            $('#ModalRegistro').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget)
+
+                var title = button.data('title')
+                var action = button.data('action')
+                var id = button.data('id')
+                var type = button.data('type')
+
+                var modal = $(this)
+                modal.find('.modal-title').text(title)
+                modal.find('.id-table').attr('value', id)
+                modal.find('.type-table').attr('value', type)
+                modal.find('.modal-form').attr('action', action)
+            })
+
+            $('.editaRegistro').on('click', function () {
+                $('input[name=data]').attr('value', $(this).data('data'));
+                $('input[name=desc]').attr('value', $(this).data('desc'));
+                $('input[name=categoria]').attr('value', $(this).data('cat'));
+                $('input[name=valor]').attr('value', $(this).data('valor'));
+            })
+
         </script>
 
     </div>
